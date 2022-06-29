@@ -26,12 +26,14 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 
 	grades.sort()
 
+	let points
+	
 	if (grades.length >= 5) {
-		let points = Math.round(grades.slice(0,5).reduce((accumulator, curr) => accumulator + curr)) // reduce calculates sum
+		points = Math.round(grades.slice(0,5).reduce((accumulator, curr) => accumulator + curr)) // reduce calculates sum
 	}
 	
 	else {
-		let points = "Nicht verfügbar"
+		points = "Nicht verfügbar"
 	}
 
 	let average = Math.round(arrayAverage(grades)*1000)/1000 // *1000/1000 for rounding to three decimal places. also - i have checked - the average is calculated with the unrounded grades
