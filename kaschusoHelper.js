@@ -11,7 +11,7 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 	
 	let grades = []
 
-	for (let i = 0; i < gradeTable.length; i++) {
+	for (let i = 0; i < gradeTable.length; i++) { // transfer valid gradeTable values to the grades array
 		if (gradeTable[i].attributes.length != 0) {
 			continue
 		}
@@ -26,11 +26,17 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 
 	grades.sort()
 
-	let points = Math.round(grades.slice(0,5).reduce((accumulator, curr) => accumulator + curr)) // reduce calculates sum
+	if (grades.length >= 5) {
+		let points = Math.round(grades.slice(0,5).reduce((accumulator, curr) => accumulator + curr)) // reduce calculates sum
+	}
+	
+	else {
+		let points = "Nicht verfügbar"
+	}
 
-	let average = Math.round(arrayAverage(grades)*1000)/1000 // *1000/1000 for rounding to three decimal places
+	let average = Math.round(arrayAverage(grades)*1000)/1000 // *1000/1000 for rounding to three decimal places. also - i have checked - the average is calculated with the unrounded grades
 
-	let result = "<p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p>" // points and average are guaranteed to have the type int, so there is no need for sanitisation
+	let result = "<p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p>" // points and average are guaranteed to have the type int or be a string consisting of only letters, so there is no need for sanitisation
 	
 	document.getElementsByClassName("div_noten_outer")[0].innerHTML = result + document.getElementsByClassName("div_noten_outer")[0].innerHTML
 }
