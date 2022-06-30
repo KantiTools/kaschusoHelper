@@ -7,7 +7,7 @@ function arrayAverage(inputArray) {
 }
 
 function newMenuBarButton(buttonNumber, buttonText, kaschusoHelperPageName) {
-	let button = document.getElementById("nav-main-menu").children[0].cloneNode(true) // the "start button"
+	let button = document.getElementById("nav-main-menu").children[1].cloneNode(true) // the "grades" button. we use this one instead of start as it is not underlined
 	
 	button.id = "kaschusoHelperButton" + buttonNumber // change the button id
 	button.children[1].id = "kaschusoHelperButtonTitle" + buttonNumber // change the id of the text element
