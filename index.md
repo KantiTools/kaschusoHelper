@@ -8,4 +8,4 @@ KaschusoHelper ist eine Firefox-Erweiterung, welche dem Kaschuso der Kantonsschu
 
 Bei Fragen und Anregungen kann man sich gerne an lorhof1@gmail.com wenden.
 
-KaschusoHelper ist nicht mit Mozilla, Centerboard oder der Kantonsschule Solothurn assoziiert.
+KaschusoHelper und Quadrid sind nicht mit Mozilla, Centerboard oder der Kantonsschule Solothurn assoziiert.
