@@ -6,6 +6,10 @@ function arrayAverage(inputArray) {
 	return result/inputArray.length
 }
 
+if (document.getElementById("nav-main-menu") != null) {// if logged in
+	document.getElementById("nav-main-menu").children.push(document.getElementById("nav-main-menu").children[0]) // clone the first menu button
+}
+
 if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on grades page
 	let gradeTable = document.getElementsByClassName("div_noten_outer")[0].firstChild.children[2].children[0].children[0].children
 	
