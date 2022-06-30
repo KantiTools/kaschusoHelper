@@ -10,6 +10,8 @@ function arrayAverage(inputArray) {
 
 // utility functions modifying the page
 function newMenuBarButton(buttonNumber, buttonText, kaschusoHelperPageName) {
+	// known bug: if one of the buttons created this way or the grades button is selected, all of the mentioned get underlined.
+	// also, we can't set the icon yet
 	let button = document.getElementById("nav-main-menu").children[1].cloneNode(true) // the "grades" button. we use this one instead of start as it is not underlined
 	
 	button.id = "kaschusoHelperButton" + buttonNumber // change the button id
