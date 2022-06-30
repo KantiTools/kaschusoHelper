@@ -35,7 +35,7 @@ if (document.getElementById("nav-main-menu") != null) {// if logged in
 
 if (new URLSearchParams(window.location.search).get("kaschusoHelperPage") == "moodle") {
 	clearMainArea()
-	document.getElementsByClassName("mdl-layout__content")[0].innerHTML = '<iframe src="https://moodle.ksso.ch" style="height:100%"></iframe>'
+	document.getElementsByClassName("mdl-layout__content")[0].innerHTML = '<iframe src="https://moodle.ksso.ch" style="height:100%; width:100%"></iframe>'
 }
 
 	// grades page modifications
