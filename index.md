@@ -20,4 +20,4 @@ Um jene Freiheiten zu ermöglichen, ist der Quellcode unserer Erweiterung unter 
 
 Bei Fragen und Anregungen kann man sich gerne an lorhof1@gmail.com wenden.
 
-KaschusoHelper und Quadrid sind nicht mit Mozilla, Centerboard oder der Kantonsschule Solothurn assoziiert.
+KaschusoHelper ist nicht mit Mozilla, Centerboard oder der Kantonsschule Solothurn assoziiert.
