@@ -1,3 +1,5 @@
+// utility functions
+
 function arrayAverage(inputArray) {
 	let result = 0
 	for (let i = 0; i < inputArray.length; i++) {
@@ -6,6 +8,7 @@ function arrayAverage(inputArray) {
 	return result/inputArray.length
 }
 
+// utility functions modifying the page
 function newMenuBarButton(buttonNumber, buttonText, kaschusoHelperPageName) {
 	let button = document.getElementById("nav-main-menu").children[1].cloneNode(true) // the "grades" button. we use this one instead of start as it is not underlined
 	
@@ -19,10 +22,22 @@ function newMenuBarButton(buttonNumber, buttonText, kaschusoHelperPageName) {
 	document.getElementById("nav-main-menu").appendChild(button)
 }
 
+function clearMainArea() {
+	document.getElementsByClassName("mdl-layout__content")[0].innerHTML = ""
+}
+
+// page modifications
+	// additional tabs
+
 if (document.getElementById("nav-main-menu") != null) {// if logged in
 	newMenuBarButton(1, "Moodle", "moodle")
 }
 
+if (new URLSearchParams(window.location.search).get("kaschusoHelperPage") == "moodle") {
+
+}
+
+	// grades page modifications
 if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on grades page
 	let gradeTable = document.getElementsByClassName("div_noten_outer")[0].firstChild.children[2].children[0].children[0].children
 	
