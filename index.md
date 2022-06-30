@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
-
 [Add to Firefox](https://github.com/Quadrid/kaschusoHelper/releases/latest/download/kaschusoHelper.xpi)
+
+## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Quadrid/kaschusoHelper/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
