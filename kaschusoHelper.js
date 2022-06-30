@@ -6,8 +6,16 @@ function arrayAverage(inputArray) {
 	return result/inputArray.length
 }
 
+function newMenuBarButton(buttonNumber, buttonText, kaschusoHelperPageName) {
+	let button = document.getElementById("nav-main-menu").children[0].cloneNode(true) // the "start button"
+	button.id = "kaschusoHelperButton" + buttonNumber // change the button id
+	button.children[1].id = "kaschusoHelperButtonTitle" + buttonNumber // change the id of the text element
+	button.children[1].innerText = buttonText
+	button.href += "&kaschusoHelperPage=" + kaschusoHelperPageName // internal pages are specified through the url parameters
+}
+
 if (document.getElementById("nav-main-menu") != null) {// if logged in
-	document.getElementById("nav-main-menu").appendChild(document.getElementById("nav-main-menu").children[0]) // clone the first menu button
+	newMenuBarButton(1, "Moodle", "moodle")
 }
 
 if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on grades page
