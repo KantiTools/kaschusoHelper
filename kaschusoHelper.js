@@ -8,10 +8,15 @@ function arrayAverage(inputArray) {
 
 function newMenuBarButton(buttonNumber, buttonText, kaschusoHelperPageName) {
 	let button = document.getElementById("nav-main-menu").children[0].cloneNode(true) // the "start button"
+	
 	button.id = "kaschusoHelperButton" + buttonNumber // change the button id
 	button.children[1].id = "kaschusoHelperButtonTitle" + buttonNumber // change the id of the text element
+	
 	button.children[1].innerText = buttonText
+
 	button.href += "&kaschusoHelperPage=" + kaschusoHelperPageName // internal pages are specified through the url parameters
+	
+	document.getElementById("nav-main-menu").appendChild(button)
 }
 
 if (document.getElementById("nav-main-menu") != null) {// if logged in
