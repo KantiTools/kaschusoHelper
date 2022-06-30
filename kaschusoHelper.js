@@ -33,12 +33,29 @@ function clearMainArea() {
 
 if (document.getElementById("nav-main-menu") != null) {// if logged in
 	newMenuBarButton(1, "Moodle", "moodle")
+	newMenuBarButton(2, "Gisy", "gisy")
+	newMenuBarButton(3, "Cloud", "cloud")
 }
 
-if (new URLSearchParams(window.location.search).get("kaschusoHelperPage") == "moodle") {
-	clearMainArea()
-	document.getElementsByClassName("mdl-layout__content")[0].innerHTML = '<iframe src="https://moodle.ksso.ch" style="height:100%; width:100%"></iframe>'
+switch (new URLSearchParams(window.location.search).get("kaschusoHelperPage")) {
+	case "moodle":
+		clearMainArea()
+		document.getElementsByClassName("mdl-layout__content")[0].innerHTML = '<iframe src="https://moodle.ksso.ch" style="height:100%; width:100%"></iframe>'
+		break
+	case "gisy": 
+		clearMainArea()
+		window.open('https://gisy.ksso.ch', '_blank', 'https://gisy.ksso.ch')
+		break
+	case "cloud": 
+		clearMainArea()
+		window.open('https://cloud.ksso.ch', '_blank', 'https://cloud.ksso.ch')
+		break
 }
+//target="popup" onclick="window.open(\'https://gisy.ksso.ch\',\'yes\',\'width=1920,height=1080\')"
+//if (new URLSearchParams(window.location.search).get("kaschusoHelperPage") == "moodle") {
+//	clearMainArea()
+//	document.getElementsByClassName("mdl-layout__content")[0].innerHTML = '<iframe src="https://moodle.ksso.ch" style="height:100%; width:100%"></iframe>'
+//}
 
 	// grades page modifications
 if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on grades page
@@ -66,7 +83,7 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 	if (grades.length >= 5) {
 		points = Math.round(grades.slice(0,5).reduce((accumulator, curr) => accumulator + curr)) // reduce calculates sum
 	}
-	
+
 	else {
 		points = "Nicht verfügbar"
 	}
