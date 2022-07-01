@@ -6,6 +6,19 @@ function arrayAverage(inputArray) {
 	return result/inputArray.length
 }
 
+function enableDarkMode() {
+	let menuBarDarkModeColor = "#000000"
+	let sideBarDarkModeColor = "#000000"
+	let mainAreaDarkModeColor = "#000000"
+	let textDarkModeColor = "#ffffff"
+
+	document.getElementById("logo-span").style = "background-color: " + menuBarDarkModeColor
+	document.getElementById("sn-gradient").style = "background-image: linear-gradient(90deg, " + menuBarDarkModeColor + ", #2971ad)"
+	document.getElementById ("navigation-list").style = "background-color: " + sideBarDarkModeColor
+	document.getElementById("content-card").style = "background-color: " + mainAreaDarkModeColor
+	document.getElementsByTagName("body").style = "color: " + textDarkModeColor
+}
+
 if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on grades page
 	let gradeTable = document.getElementsByClassName("div_noten_outer")[0].firstChild.children[2].children[0].children[0].children
 	
@@ -42,3 +55,5 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 	
 	document.getElementsByClassName("div_noten_outer")[0].innerHTML = result + document.getElementsByClassName("div_noten_outer")[0].innerHTML
 }
+
+enableDarkMode()
