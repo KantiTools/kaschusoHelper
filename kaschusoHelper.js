@@ -38,7 +38,19 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 
 	let average = Math.round(arrayAverage(grades)*1000)/1000 // *1000/1000 for rounding to three decimal places. also - i have checked - the average is calculated with the unrounded grades
 
-	let result = "<p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p>" // points and average are guaranteed to have the type int or be a string consisting of only letters, so there is no need for sanitisation
+	let deviationNegative
+	let deviationPositive
+	for (let i = 0; i < grades.length; i++) {
+		if (grades[i] < 4) {
+			deviationNegative += 4 - grades[i]
+		}
+		else {
+			deviationPositive += grades[i] - 4
+		}
+	} 
+
+
+	let result = "<p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p><p>Summe der Abweichungen nach oben: " + deviationPositive + "</p><p>Summe der Abweichungen nach unten: " + deviationNegative + "</p>" // points and average are guaranteed to have the type int or be a string consisting of only letters, so there is no need for sanitisation
 	
 	document.getElementsByClassName("div_noten_outer")[0].innerHTML = result + document.getElementsByClassName("div_noten_outer")[0].innerHTML
 }
