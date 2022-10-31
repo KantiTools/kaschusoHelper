@@ -38,8 +38,8 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 
 	let average = Math.round(arrayAverage(grades)*1000)/1000 // *1000/1000 for rounding to three decimal places. also - i have checked - the average is calculated with the unrounded grades
 
-	let deviationNegative
-	let deviationPositive
+	let deviationNegative = 0
+	let deviationPositive = 0
 	for (let i = 0; i < grades.length; i++) {
 		if (grades[i] < 4) {
 			deviationNegative += 4 - grades[i]
