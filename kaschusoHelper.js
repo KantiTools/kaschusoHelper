@@ -55,7 +55,7 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 		average = "Nicht verfügbar";
 	}
 
-	let result = "<p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p><p>Summe der Abweichungen nach oben: " + deviationPositive + "</p><p>Summe der Abweichungen nach unten: " + deviationNegative + "</p>"; // everything guaranteed to have the type int or be a string consisting of only letters, so there is no need for sanitisation
+	let result = "<p>Promotionsanforderungen Sekundarstufe P: mindestens 19 Punkte und Durchschnitt mindestens vier</p><p>Promotionsanforderungen Gymnasium: mindestens 19 Punkte, Abweichung nach unten weniger als 2.5 und kleiner als die Hälfte der Abweichung nach oben</p><p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p><p>Summe der Abweichungen nach oben: " + deviationPositive + "</p><p>Summe der Abweichungen nach unten: " + deviationNegative + "</p>"; // everything guaranteed to have the type int or be a string consisting of only letters, so there is no need for sanitisation
 	
 	document.getElementsByClassName("div_noten_outer")[0].innerHTML = result + document.getElementsByClassName("div_noten_outer")[0].innerHTML;
 }
