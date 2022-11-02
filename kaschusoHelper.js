@@ -49,6 +49,11 @@ if (document.getElementsByClassName("div_noten_outer").length != 0) { // if on g
 		}
 	} 
 
+	if (grades.length == 0) {
+		deviationNegative = "Nicht verfügbar"
+		deviationPositive = "Nicht verfügbar"
+		average = "Nicht verfügbar"
+	}
 
 	let result = "<p>Summe der fünf tiefsten Noten: " + points + "</p><p>Notendurchschnitt: " + average + "</p><p>Summe der Abweichungen nach oben: " + deviationPositive + "</p><p>Summe der Abweichungen nach unten: " + deviationNegative + "</p>" // points and average are guaranteed to have the type int or be a string consisting of only letters, so there is no need for sanitisation
 	
