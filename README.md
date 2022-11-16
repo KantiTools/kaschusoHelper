@@ -1,3 +1,5 @@
+This branch adds data relevant for the promotion in the gymnasium
+
 # kaschusoHelper
 KaschusoHelper (Working Title) is an extension which is supposed to help students of the KSSO in regards to the IT infrastructure.
 
